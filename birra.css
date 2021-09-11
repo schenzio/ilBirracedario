@@ -1,0 +1,617 @@
+/*FONT*/
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Lexend+Peta&display=swap');
+
+/*MEDIA QUERY*/
+@media screen and (min-width: 320px) {
+	body {
+		font-size: 0.6em;
+	}
+	h1 {
+		font-size: 4.8em;
+    }
+	h2 {
+        font-size: 1.9em;
+	}
+	div#cit::after {
+		font-size: 0.9em;
+	}
+	div#autore::after {
+		font-size: 1.4em;
+	}
+	#regioni {
+        width:35%;
+		margin: auto;
+	    flex-direction: column;
+    }
+	*.belga, *.inglese, *.tedesca {
+		flex-direction: column;
+	}
+	*.belga ul, *.inglese ul, *.tedesca ul {
+	    padding: 8%;
+	    padding-left: 40px;
+	    width: 48%;
+    }
+	div.img {
+		width: 48%;
+	}
+	#pietanze {	
+	        width: 92%;
+	}
+	#pietanze .box {
+		width: 20%;
+	}
+	#risultato .box {
+	    width: 25%; 
+	}
+	#risultato .boxnome {
+		position: absolute;
+		left: 4%;
+	    width: 70%;
+	}
+}
+@media screen and (min-width: 480px) {
+	body {
+		font-size: 0.7em;
+	}
+	h1 {
+		font-size: 5.7em;
+	}
+	h2 {
+        font-size: 2.1em;
+	}
+	div#cit::after {
+		font-size: 1.1em;
+	}
+	div#autore::after {
+	    font-size: 1.7em;
+	}
+	#regioni {
+	    width:100%;
+		flex-direction: row;
+	    justify-content: space-around;
+    }
+	*.belga, *.inglese, *.tedesca {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	*.belga ul, *.inglese ul, *.tedesca ul {
+	    line-height:1.2em;
+	    padding: 8%;
+	    padding-left: 58px;
+	    width: 35%;
+    }
+	div.img {
+		width: 33%;
+	}
+	#pietanze .box {
+		width: 16.6%;
+	}
+	div#pietanze {
+		width: 88%;
+	}
+	#risultato .box {
+	    width: 20%; 
+	}
+}
+@media screen and (min-width: 768px) {
+	body {
+		font-size: 1em;
+	}
+	h1 {
+		font-size: 6.6em
+	}
+		h2 {
+        font-size: 2.3em;
+	}
+	div#cit::after {
+		font-size: 1.3em;
+	}
+	div#autore::after {
+		font-size: 1.9em;
+	}
+	*.belga ul, *.inglese ul, *.tedesca ul {
+	    padding: 4%;
+	    padding-left: 58px;
+	    width: 26%;
+    }
+	div.img {
+		width: 27%;
+	}
+	#pietanze .box {
+		width: 12.6%;
+	}
+	div#pietanze {
+		width: 84%;
+	}
+	#risultato .box {
+	    width: 16.6%; 
+	}
+	#risultato .boxnome {
+		position: absolute;
+		left: 8%;
+	    width: 60%;
+	}
+}
+@media screen and (min-width: 1024px) {
+	h1 {
+		font-size: 7.2em
+	}
+	h2 {
+        font-size: 2.5em;
+	}
+	div#cit::after, nav li {
+		font-size: 1.5em;
+	}
+	div#autore::after {
+		font-size: 2.1em;
+			
+	}
+	*.belga ul, *.inglese ul, *.tedesca ul {
+	   line-height:1.2em;
+	   padding: 5%;
+	   padding-left: 85px;
+	   width: 20%;
+    }
+	div#pietanze {
+		width: 78%;
+	}
+	#risultato .boxnome {
+       letter-spacing: 0.1em;
+       font-weight: bold;
+	   width: 51%;
+	   position: absolute;
+	   left: 12%;
+	}
+}
+@media screen and (min-width: 1200px) {
+	body {
+		font-size: 1em;
+	}
+	h1 {
+		font-size: 8.2em;
+	}
+	h2 {
+        font-size: 2.6em;
+	}
+	div#cit::after, nav li {
+		font-size: 1.6em;
+	}
+	div#autore::after {
+		font-size: 2.2em;
+	}
+	div#pietanze {
+		width: 76%;
+	}
+    #risultato .boxnome {
+	font-weight: bolder;
+}
+}
+/*BODY*/
+html{
+	scroll-behavior: smooth;
+}
+body {
+	font-family: 'Roboto Slab', serif;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(#262626, #0d0d0d);
+	color: white;
+	line-height: 1.5;
+}
+#home {
+	height: 100vh;
+}
+input {
+	color: white;
+	font-weight: bold;
+	border: 0;
+	padding: 0.5%;
+	margin: 1%;
+	cursor: pointer;
+	font-size: inherit;
+}
+h2  {
+	margin: 0;
+	font-weight: bold;
+	padding-top: 3%;
+	}
+h3 {
+    text-align: center;
+}
+/*HEADER*/
+header {
+	position: fixed;
+	top: 0px;
+	width:100%;
+	display:flex;
+	background-color: white;
+	justify-content: space-between;
+	z-index: 9999;
+}
+span#apri_menu {
+	font-size:40px;
+	position: absolute;
+	top:-2px;
+	right:20px;
+	color: black;
+}
+#apri_menu, #chiudi_menu {
+	cursor: pointer;
+}
+nav {
+	position: fixed;
+	top:0px;
+	right:0px;
+	transition: 0.5s;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+	opacity: 0.9;
+	background-color: black;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+nav li {
+	margin: auto;
+	font-family: 'Lexend Peta', sans-serif;
+	border-bottom: 1px solid white;
+	font-weight: bold;	
+    text-transform:	uppercase;
+	text-align: center;
+	padding: 8%;
+	list-style-type: none;
+	line-height: 1;
+}
+nav a {
+	color: white;
+	background-color: black;
+	text-decoration: none;
+}
+/*HOME*/
+section#home {
+	background-image: url("sfondoHome.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+}
+h1 {
+	font-family: 'Great Vibes', cursive;
+	text-align: center;
+	margin: auto;
+	position: relative;
+	top: 30%;
+	width: 86%; 
+}
+div#cit {
+	margin: auto;
+	width:88%;
+	text-align: center;
+	position: relative;
+	top: 46%;
+}
+div#autore {
+	margin: auto;
+	text-align: center;
+	position: relative;
+	top: 48%;
+	}
+div#cit::after {
+	content: "Il comportamento più adeguato per un essere umano è sentirsi fortunato di essere vivo, umile di fronte all'immensità del tutto; magari facendosi una birra";
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-family: 'Lexend Peta', sans-serif;
+	letter-spacing: 0.1em;
+	-webkit-animation: citazioni 50s; 
+	animation: citazioni 50s; 
+	animation-iteration-count: infinite;
+}
+div#autore::after {
+	content: "Kary Mullis";
+	font-weight: bolder;
+	font-family: 'Cutive Mono', monospace;
+	-webkit-animation: autore 50s; 
+	animation: autore 50s; 
+	animation-iteration-count: infinite;
+}
+@keyframes citazioni{
+	10% {content: "Il comportamento più adeguato per un essere umano è sentirsi fortunato di essere vivo, umile di fronte all'immensità del tutto; magari facendosi una birra"} /*Kary Mullis*/
+	20% {content: "La birra è la prova che Dio ci ama e vuole che siamo felici"} /*Benjamin Franlyn*/
+	30% {content: "Conoscere i luoghi vicini e lontani non vale la pena, non è che teoria; saper dove meglio si spini è pratica vera, geografia"} 
+    40% {content: "Tutti noi abbiamo bisogno di credere in qualcosa: io credo che tra poco mi farò un'altra birra";} /*Homer J. Simpson*/
+	50% {content: "La chiesa è vicina ma la strada è ghiacciata; il pub è lontano ma camminerò con prudenza"} /*proverbio russo*/
+	60% {content: "Basta una birra a colazione e le ragnatele se ne vanno, la voce ti si alza di due ottave e ti sorge un bel sole dentro"} /*Robert De Niro*/
+	70% {content: "Nel vino c'è la saggezza, nella birra c'è la forza, nell'acqua ci sono i batteri"} /*proverbio tedesco*/
+	80%	{content: "Deve essere stato un uomo saggio ad inventare la birra"} /*Platone*/
+	90% {content: "Una pinta di birra è un pasto da re"} /*William Shakespeare*/
+	100%{content: "La birra ti fa sentire come dovresti sentirti senza birra"} /*Henry Lawson*/
+}
+@keyframes autore{
+	10% {content: "Kary Mullis"}
+	20% {content: "Benjamin Franklin"} 
+	30% {content: "Johann Wolfgang von Goethe"}
+    40% {content: "Homer J. Simpson"}
+	50% {content: "proverbio russo"}
+	60% {content: "Robert De Niro"}
+    70% {content: "proverbio tedesco"}
+	80%	{content: "Platone"}
+    90% {content: "William Shakespeare"}
+	100%{content: "Henry Lawson"}
+}
+/*SCOPRI*/
+#foto_ingredienti {
+	width: 99%;
+	display: flex;
+	justify-content: space-around;
+	margin: 3% auto;
+}
+#foto_ingredienti img{
+    border-radius: 100px;
+	max-width: 100%;
+}
+#scopri ul {
+	margin-left: -2%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+#scopri li {
+	margin: 1%;
+}
+.modal{
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0, 0, 0); 
+  opacity: 0.9;
+}
+.modal-content {
+  display: inherit;
+  background-color: #715045;
+  position: relative;
+  top: 25%;
+  margin: auto; 
+  padding: 5%;
+  width: 80%;  
+  line-height: 1.7;
+}
+#tappo{
+	display : flex;
+	justify-content: center;
+}
+#tappo input {
+	max-width: 100%;
+	padding: 0;
+}
+.rwd-video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+.rwd-video iframe {
+    height: 60%;
+    left: 20%;
+    position: absolute;
+    width: 60%;
+}
+/*CATALOGO*/
+#regioni {
+    display: flex;
+}
+#regioni input {
+	border-radius: 12px;
+	padding: 1%;
+}
+#regioni input:nth-child(1), *.belga {
+	background: linear-gradient(to right, #800000, #663300);
+}
+#regioni input:nth-child(2), *.inglese {
+	background: linear-gradient(to right, #e63900, #331a00);
+}
+#regioni input:nth-child(3), *.tedesca {
+	background: linear-gradient(to right, #e6ac00, #e68a00);
+}
+#vetrina_catalogo {
+	position: relative;
+}
+
+.intro p {
+	word-spacing: 0.1em;
+	line-height: 1.7em;
+}
+input.frecce {
+	color: black;
+	font-size: 1.5em;
+	background-color: white;
+	border-radius: 60%;
+	width: 2.8%;
+	font-weight: normal;
+	padding: 0;
+	position: absolute;
+	top: 33vh;
+}
+#indietro{
+	left: 2%;
+}
+#avanti{
+	right: 2%;
+}
+*.belga, *.inglese, *.tedesca {
+	margin: 1% auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: 92%;
+	justify-content: space-around;
+	border-radius: 20px 20px;
+}
+*.belga span, *.inglese span, *.tedesca span {
+	padding: 7px;
+}
+*.belga h3, *.inglese h3, *.tedesca h3 {
+	margin: 1%;
+	font-size: 2.5em;
+	font-family: 'Great Vibes', cursive;
+	width: 90%;
+}
+*.belga img, *.inglese img, *.tedesca img {
+	border-radius: 20px 20px;
+	max-width: 100%;
+}
+*.belga ul, *.inglese ul, *.tedesca ul {
+	font-family: 'Great Vibes', cursive;
+	order:3;
+	color: black;
+	line-height:1.2em;
+	margin: auto;
+	background-image: url("etichetta.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	font-size: 1.3em;
+}
+*.belga p, *.inglese p, *.tedesca p {
+	margin: auto;
+	order:4;
+	line-height: 1.7em;
+	margin: 1.5%;
+	padding: 10px;
+}
+div.img {
+	margin: auto;
+	display: flex;
+}
+/*ricerca*/
+#pietanze {
+	display:flex;
+	flex-wrap: wrap;
+	margin: 2% auto;
+	justify-content: center;
+}
+#provenienza, #guida {
+	margin: 2% auto;
+	text-align: center;
+	
+	}
+#provenienza input {
+	 background: linear-gradient(#595959, #333333);
+	 border-radius: 10px;
+	 letter-spacing: 0.1em;
+}
+#risultato {
+	width: 95%;
+	display: flex;
+	margin-left: 5%;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#risultato img {
+	border-radius: 30%;
+	width: 80%;
+	margin-bottom: 1%;
+}
+#risultato .box {
+	display: flex;
+}
+.box {
+	position: relative;
+}
+#pietanze img, #ingredienti img  {
+	max-width: 100%; 
+}
+.boxnome {
+	text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+	font-size: inherit;
+}
+#foto_ingredienti .boxnome {
+	position: absolute;
+	top: 46%;
+	left: 30%;
+	padding: 4%;
+	border-radius: 17px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+#pietanze .boxnome {
+	position: absolute;
+	bottom: 0px;
+    left: 0px;
+    width: 100%;
+	
+}
+#risultato .boxnome {
+	position: absolute;
+	bottom: 3%;
+	padding: 2.5%;
+	border-radius: 24px;
+	font-variant: small-caps;
+}
+#reset{
+	text-align: center;
+}
+#reset input {
+	text-transform: uppercase;
+	background: linear-gradient(#5900b3, #26004d);
+	letter-spacing: 0.3em;
+	border-radius: 10%;
+	margin-left: 6%;
+
+}
+#pietanze .box:hover, #foto_ingredienti .box:hover {
+	font-weight: bolder;
+	color: #fc9803;
+}
+#pietanze .box, #foto_ingredienti .box {
+	cursor: pointer;
+}
+/*FOOTER*/
+section#about {
+	background-image: url("sfondoAbout.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+	font-size: 1.1em;
+	word-spacing: 0.1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-top: 25%;
+}
+#about p {
+	line-height: 1.5em;
+	letter-spacing: 0.1em;
+}
+.intro {
+	width: 80%;
+	margin: auto;
+	padding: 1%;
+}
+#credits img {
+  margin: 10px;
+  vertical-align: middle;
+}
+#credits li:first-of-type, #stili li:first-of-type {
+	list-style: none;
+}
+footer {
+	width: 100%;
+	background: black;
+	opacity: 0.8;
+	border-top: solid 3px white;
+}
+footer p {
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 3%;
+}
