@@ -226,10 +226,10 @@ var nodoApriMenu;
 var nodoChiudiMenu;
 var nodoMenu;
 var fotoIngredienti = {
-	"Acqua"   : "gif/acqua.gif",
-	"Malto"   : "gif/malto.gif",
-    "Luppolo" : "gif/luppolo.gif",
-	"Lieviti" : "gif/lievito.gif"
+	"Acqua"   : "acqua.gif",
+	"Malto"   : "malto.gif",
+    "Luppolo" : "luppolo.gif",
+	"Lieviti" : "lievito.gif"
 }
 var testiIngredienti = {
 	"Acqua"   : "Costituisce tra l\'85% e il 95% della birra, ma la sua importanza non si limita alla quantità. La composizione chimica dell\'acqua, modificabile dai mastri birrai grazie a moderne tecniche, ha infatti una forte incidenza sul prodotto finale. Per esempio, le lager chiare impiegano un\'acqua più leggera e dal pH lievemente acido, mentre le birre scure una più dura e alcalina, ricca di bicarbonato; un\'acqua con abbondanza di solfato e magnesio risulta invece ideale per esaltare l\'amarezza del luppolo.",
